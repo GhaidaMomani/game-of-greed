@@ -39,3 +39,5 @@ This app is written using Python 3.9.5, following best practices.
 ## Change Log
 
 version 0.1.0 ; 14/3/2022 Initiated
+
+https://github.com/GhaidaMomani/game-of-greed/pull/4
