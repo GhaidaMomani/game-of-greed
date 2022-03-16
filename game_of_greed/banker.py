@@ -2,6 +2,7 @@ class Banker:
     """
     This class stores the points for each round, it banks them untill being used next
     """
+
     def __init__(self):  # <-
         # self.points = 0
         self.shelved = 0
