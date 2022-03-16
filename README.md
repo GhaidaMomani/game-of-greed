@@ -1,15 +1,15 @@
-# Lab: Game of Greed 1
+# Lab: Game of Greed II
 
 **Authors**:
 
     Ammar Abul-Feilat
     Salim Hassouneh
-    Mohammad Salhab  
+    Mohammad Salhab
     Ghaida Al Momani
 
 ---
 
-**Version**: 0.1.0
+**Version**: 0.2.0
 
 ## Overview
 
@@ -39,5 +39,12 @@ This app is written using Python 3.9.5, following best practices.
 ## Change Log
 
 version 0.1.0 ; 14/3/2022 Initiated
+version 0.2.0 ; 16/3/2022 Initiated
 
+https://github.com/GhaidaMomani/game-of-greed/pull/1
+https://github.com/GhaidaMomani/game-of-greed/pull/2
+https://github.com/GhaidaMomani/game-of-greed/pull/3
 https://github.com/GhaidaMomani/game-of-greed/pull/4
+https://github.com/GhaidaMomani/game-of-greed/pull/5
+https://github.com/GhaidaMomani/game-of-greed/pull/6
+https://github.com/GhaidaMomani/game-of-greed/pull/7
