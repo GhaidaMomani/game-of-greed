@@ -1,5 +1,6 @@
 import random
 from typing import Counter
+from banker import Banker
 
 class GameLogic:
     """
@@ -61,43 +62,15 @@ class GameLogic:
         return tuple(output)
 
 
-class Banker:
-    """
-    This class stores the points for each round, it banks them untill being used next
-    """
-    def __init__(self):  # <-
-        # self.points = 0
-        self.shelved = 0
-        self.balance = 0
-        pass
-
-    def shelf(self, points):
-        """
-        input to shelf is the amount of points (integer) to add to shelf.
-        """
-        self.shelved += points  # <--
-
-    def bank(self):
-        """
-        should add any points on the shelf to total and reset shelf to 0.
-        """
-        self.balance += self.shelved
-        self.clear_shelf()
-
-    def clear_shelf(self):
-        """
-        should remove all unbanked points.
-        """
-        self.shelved = 0
-
 
 # y = GameLogic()
 # GameLogic
-print(GameLogic.calculate_score((3,3,3,1,5,1)))
+# print(GameLogic.calculate_score((3,3,3,1,5,1)))
 # # y.roll_dice(6)
 # z = Banker()
 # print(z.shelf(10))
 # print(z.shelf(1100))
+
 # print(z.shelf(1500))
 # print(z.bank())
 # print(z.temp_unbanked)
