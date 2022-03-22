@@ -1,4 +1,4 @@
-# Lab: Game of Greed II
+# Lab: Game of Greed III
 
 **Authors**:
 
@@ -9,7 +9,7 @@
 
 ---
 
-**Version**: 0.2.0
+**Version**: 0.3.0
 
 ## Overview
 
@@ -17,7 +17,7 @@ The classic dice game of all or nothing! Greed is quick to learn and impossible 
 
 ---
 
-# Calculate Score
+## Calculate Score
 
     zilch - roll with no scoring dice should return 0
     ones - rolls with various number of 1s should return correct score
@@ -39,12 +39,13 @@ This app is written using Python 3.9.5, following best practices.
 ## Change Log
 
 version 0.1.0 ; 14/3/2022 Initiated
-version 0.2.0 ; 16/3/2022 Initiated
+version 0.2.0 ; 16/3/2022 updated
+version 0.3.0 ; 22/3/2022 updated
 
-https://github.com/GhaidaMomani/game-of-greed/pull/1
-https://github.com/GhaidaMomani/game-of-greed/pull/2
-https://github.com/GhaidaMomani/game-of-greed/pull/3
-https://github.com/GhaidaMomani/game-of-greed/pull/4
-https://github.com/GhaidaMomani/game-of-greed/pull/5
-https://github.com/GhaidaMomani/game-of-greed/pull/6
-https://github.com/GhaidaMomani/game-of-greed/pull/7
+<https://github.com/GhaidaMomani/game-of-greed/pull/1>
+<https://github.com/GhaidaMomani/game-of-greed/pull/2>
+<https://github.com/GhaidaMomani/game-of-greed/pull/3>
+<https://github.com/GhaidaMomani/game-of-greed/pull/4>
+<https://github.com/GhaidaMomani/game-of-greed/pull/5>
+<https://github.com/GhaidaMomani/game-of-greed/pull/6>
+<https://github.com/GhaidaMomani/game-of-greed/pull/7>
