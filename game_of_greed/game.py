@@ -1,6 +1,6 @@
 # add game_of_greed."" if you want to run file not pytest!
-from game_of_greed.game_logic import GameLogic
-from game_of_greed.banker import Banker
+from game_logic import GameLogic
+from banker import Banker
 from typing import Counter
 
 
@@ -17,7 +17,8 @@ class Game:
         numof_rolled_dice = 6
         round_count = 1
         print("Welcome to Game of Greed")
-        wanna_play = input("Wanna play? ")
+        #print("Wanna play? ")
+        wanna_play = input()
         if wanna_play == "n":
             print("OK. Maybe another time")
 
@@ -25,22 +26,25 @@ class Game:
 
             choice_message = "Enter dice to keep (no spaces), or (q)uit: "
             round_message = f"Starting round {round_count}"
-            print(round_message)
+            #print(round_message)
             rolled_dice = self.roller(numof_rolled_dice)
-            print(f"Rolling {numof_rolled_dice} dice...")
+            #print(f"Rolling {numof_rolled_dice} dice...")
 
             nums = []
 
             for i in rolled_dice:
                 nums.append(str(i))
-            print(",".join(nums))
+            
+            print("*** "+",".join(nums))
 
             while True:
-
+                if round_count == 20:
+                    return "q"
+                    
                 self.dice_roll_score = tuple(int(x) for x in nums)
                 checker = Counter(self.dice_roll_score).most_common()
 
-                score_decision = GameLogic.calculate_score(self.dice_roll_score)
+                score_decision = GameLogic.get_scorers(self.dice_roll_score)
 
                 if score_decision == 0:
                     print("Zilch!!! Round over")
@@ -60,11 +64,11 @@ class Game:
                     for i in rolled_dice:
                         nums.append(str(i))
 
-                    print(",".join(nums))
+                    print("*** "+",".join(nums))
 
                 else:
-
-                    decision = input(choice_message)
+                    print(choice_message)
+                    decision = input()
 
                     if decision == "q":
                         anti_cheat = False
@@ -82,6 +86,7 @@ class Game:
                                 f"Thanks for playing. You earned {self.banker.balance} points"
                             )
                             self.banker.clear_shelf()
+                        
                         break
 
                     elif decision == "b":
@@ -104,7 +109,7 @@ class Game:
                         nums = []
                         for i in rolled_dice:
                             nums.append(str(i))
-                        print(",".join(nums))
+                        print("*** "+",".join(nums))
 
                     elif decision == "r":
                         choice_message = "Enter dice to keep (no spaces), or (q)uit: "
@@ -114,7 +119,7 @@ class Game:
                         nums = []
                         for i in rolled_dice:
                             nums.append(str(i))
-                        print(",".join(nums))
+                        print("*** "+",".join(nums))
                         if numof_rolled_dice == 0:
                             numof_rolled_dice = 6
 
@@ -134,7 +139,7 @@ class Game:
 
                         anti_cheat = False
                         for i in range(0, len(y)):
-
+                            
                             if y[i][0] == checker[0][0]:
 
                                 if y[i][1] >= checker[0][1]:
@@ -142,13 +147,13 @@ class Game:
 
                         if anti_cheat == False:
                             print("Cheater!!! Or possibly made a typo...")
-                            print(",".join(nums))
+                            print("*** "+",".join(nums))
                             round_count += 1
                             continue
 
                         numof_rolled_dice = numof_rolled_dice - len(decision)
 
-                        score_decision = GameLogic.calculate_score(self.dice_roll_score)
+                        score_decision = GameLogic.get_scorers(self.dice_roll_score)
 
                         self.banker.shelf(score_decision)
                         print(
@@ -159,11 +164,10 @@ class Game:
                         if numof_rolled_dice == 0:
                             numof_rolled_dice = 6
 
-
 if __name__ == "__main__":
 
     from game_logic import GameLogic
 
-    game = Game(GameLogic.roll_dice, GameLogic.calculate_score)
+    game = Game(GameLogic.roll_dice, GameLogic.get_scorers)
 
     game.play()

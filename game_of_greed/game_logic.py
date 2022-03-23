@@ -13,7 +13,7 @@ class GameLogic:
         pass
 
     @staticmethod
-    def calculate_score(dice_roll):
+    def get_scorers(dice_roll):
         """
         This method it takes dice_roll as an argument ,
         and it is responsible for calculating the score by folowing the game rules.
